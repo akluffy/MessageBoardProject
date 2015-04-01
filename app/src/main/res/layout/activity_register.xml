@@ -35,7 +35,7 @@
             android:ellipsize="end"
             android:gravity="center"
             android:singleLine="true"
-            android:text="注册"
+            android:text="Register"
             android:textColor="#ffffffff"
             android:textSize="18.0dip"
             android:textStyle="bold" />

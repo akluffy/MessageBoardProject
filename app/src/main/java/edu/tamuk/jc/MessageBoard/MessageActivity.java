@@ -147,7 +147,7 @@ public class MessageActivity extends Activity implements View.OnClickListener, R
                 } else {
                     postMessage();
                     // update and refresh
-                    refresh();
+
                 }
                 break;
             }
@@ -238,6 +238,7 @@ public class MessageActivity extends Activity implements View.OnClickListener, R
             try {
                 postService.PublishService(content, email, nickname);
                 posthandler.sendEmptyMessage(FLAG_SUBMIT_SUCCESS);
+                refresh();
             } catch (ConnectTimeoutException cte) {
                 cte.printStackTrace();
                 Message msg = new Message();
@@ -293,7 +294,6 @@ public class MessageActivity extends Activity implements View.OnClickListener, R
                     break;
                 case FLAG_UPDATE_SUCCESS:
                     ((MessageActivity)mActivity.get()).showTip(MSG_UPDATE_SUCCESS);
-                    ((MessageActivity)mActivity.get()).adapter.notifyDataSetChanged();
                     break;
                 default:
                     break;
