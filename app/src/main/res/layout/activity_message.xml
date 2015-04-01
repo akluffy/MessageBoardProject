@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:id="@+id/search_go_btn">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        android:background="@drawable/background" >
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="67.0dip"
+            android:layout_height="25.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8.0dip"
+            android:background="#3FB052"
+            android:gravity="center"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:text="Back"
+            android:textColor="#ffffffff"
+            android:textSize="16.0dip"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/center_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Message Board"
+            android:textColor="#ffffffff"
+            android:textSize="18.0dip"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnLogOut"
+            android:layout_width="90.0dip"
+            android:layout_height="25.0dip"
+            android:background="#3FB052"
+            android:gravity="center"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:text="Log Out"
+            android:textColor="#ffffffff"
+            android:textSize="16.0dip"
+            android:textStyle="bold"
+            android:layout_alignTop="@+id/center_text"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.99">
+
+        <edu.tamuk.jc.MessageBoard.RefreshableView
+            android:id="@+id/refreshable_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ListView
+                android:id="@+id/list_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+            </ListView>
+        </edu.tamuk.jc.MessageBoard.RefreshableView>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnEnter"
+            android:layout_width="69dp"
+            android:layout_height="25dp"
+            android:background="@drawable/button3"
+            android:textColor="#000000"
+            android:textSize="18.0dip"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:elegantTextHeight="true"
+            android:layout_marginBottom="5dp" />
+
+        <EditText
+            android:layout_width="281dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtMessage"
+            android:layout_gravity="left|bottom" />
+
+    </FrameLayout>
+
+</LinearLayout>
